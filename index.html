@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
+      .box-1,
+      .box-2 {
+        flex: 1;
+        display: flex;
+        width: 100%;
+      }
+
+      .box-1 {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box-2 {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .output {
+        flex: 1;
+        margin-top: 12px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-1">
+        <div class="form-group">
+          <div class="input-group">
+            <label for="name">Nama: <br /></label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Masukan nama siswa"
+            />
+          </div>
+          <div class="input-group">
+            <label for="nilai">Nilai: <br /></label>
+            <input
+              type="number"
+              name="nilai"
+              id="nilai"
+              placeholder="Masukan nilai"
+            />
+          </div>
+          <button type="button" onclick="sumbit()">Submit</button>
+        </div>
+      </div>
+      <div class="box-2">
+        <h2>Output</h2>
+        <div class="output" id="output"></div>
+      </div>
+    </div>
+  </body>
+</html>
